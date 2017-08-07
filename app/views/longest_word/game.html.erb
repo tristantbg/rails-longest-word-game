@@ -1,12 +1,10 @@
-<table>
-  <tbody>
-    <tr>
-      <% @grid.each do |letter| %>
-        <td><%= letter %></td>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
+
+<div class="row">
+  <div class="col-2"></div>
+  <% @grid.each do |letter| %>
+    <div class="col-1"><%= letter %></div>
+  <% end %>
+</div>
 
 <form action="<%= score_path %>">
     <input type="text" name="attempt">
