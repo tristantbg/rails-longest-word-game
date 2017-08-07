@@ -1,0 +1,7 @@
+<% if @result[:status] == "OK" %>
+  <h1><%= @result[:message]%></h1>
+  <h2>Elapsed time: <%= @result[:time]%> seconds</h2>
+  <h2>Score: <%= @result[:score]%></h2>
+<% else %>
+  <h1><%= @result[:message] %></h1>
+<% end %>

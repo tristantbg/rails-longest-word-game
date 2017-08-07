@@ -1,0 +1,16 @@
+<table>
+  <tbody>
+    <tr>
+      <% @grid.each do |letter| %>
+        <td><%= letter %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<form action="<%= score_path %>">
+    <input type="text" name="attempt">
+    <input type="hidden" name="grid" value="<%= @grid.join %>">
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+    <input type="submit">
+  </form>
